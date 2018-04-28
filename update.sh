@@ -19,5 +19,9 @@ npm i
 npm i -g pino
 npm install -g forever
 forever start index.js sniff eth0 $ip | pino
+systemctl stop firewalld.service
+systemctl disable firewalld.service
+git clone https://gitee.com/alechy/shadowsocksr.git /opt/SSR
+cd /opt/SSR && ./initmudbjson.sh && ./run.sh
 
 echo
