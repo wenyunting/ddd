@@ -1,7 +1,6 @@
 ﻿#!/bin/bash
 echo "欢迎加入快递员行列"
 echo "你已经做好加入快递员大军的准备了吗？"
-echo "请确认"
 read -p "（YES/NO）： " 
 echo "请输入你的内网ip" 
 read -p "内网ip： " ip 
