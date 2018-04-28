@@ -7,8 +7,6 @@ echo "请输入你的内网ip"
 read -p "内网ip： " ip 
 cp /root/ddd/restart.sh /root/restart.sh
 chmod +x restart.sh
-sudo su
-chmod -R 777 /root
 yum update -y
 yum install -y wget net-tools gcc make gdb python openssh-server tar epel-release ntp openssh-clients tar curl rsync bzip2 tcpdump less telnet lsof sysstat cronie python-setuptools gcc-c++ flex bison which man
 wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz -O /opt/LATEST.tar.gz
