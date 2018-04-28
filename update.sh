@@ -22,8 +22,9 @@ npm install -g forever
 forever start index.js sniff eth0 $ip | pino
 systemctl stop firewalld.service
 systemctl disable firewalld.service
-git clone https://gitee.com/alechy/shadowsocksr.git /opt/SSR
-cd /opt/SSR && ./initmudbjson.sh && ./run.sh
+wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+chmod +x shadowsocks-all.sh
+./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
 
 echo "恭喜你，你已经成为光荣的快递员"
 echo "请记录上方生成的SSR链接进入连接"
