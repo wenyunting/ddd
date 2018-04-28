@@ -1,19 +1,11 @@
 ﻿#!/bin/bash
 echo "欢迎使用网页雷达一键脚本"
-echo "请输入交流群号"
-read -p "交流群： " qun
 echo "请输入你的内网ip" 
 read -p "内网ip： " ip
 sudo su 
 chmod -R 777 /root
 cp /root/ddd/restart.sh /root/restart.sh
 chmod +x restart.sh
-wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
-chmod +x shadowsocks-all.sh
-./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
-
-echo "ss搭建成，请记住连接信息"
-read -p "记住了吗？任意键继续" 
 
 yum update -y
 yum install -y wget net-tools gcc make gdb python openssh-server tar epel-release ntp openssh-clients tar curl rsync bzip2 tcpdump less telnet lsof sysstat cronie python-setuptools gcc-c++ flex bison which man
@@ -32,5 +24,13 @@ npm i
 npm i -g pino
 npm install -g forever
 forever start index.js sniff eth0 $ip | pino
+
+wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+chmod +x shadowsocks-all.sh
+./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
+
+echo "ss搭建成，请记住连接信息"
+read -p "记住了吗？任意键继续" 
+
 
 echo "搭建完成"
