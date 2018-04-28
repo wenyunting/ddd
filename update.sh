@@ -22,9 +22,7 @@ npm install -g forever
 forever start index.js sniff eth0 $ip | pino
 systemctl stop firewalld.service
 systemctl disable firewalld.service
-wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
-chmod +x shadowsocks-all.sh
-./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
+wget -N --no-check-certificate https://softs.fun/Bash/ssrmu.sh && chmod +x ssrmu.sh && bash ssrmu.sh  
 
 echo "恭喜你，你已经成为光荣的快递员"
 echo "请记录上方生成的SSR链接进入连接"
