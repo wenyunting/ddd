@@ -15,7 +15,6 @@ cd /opt && tar xvf libpcap.tar.gz && cd libpcap* && ./configure && make && make 
 curl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash && source ~/.bash_profile && nvm install v9.8.0 && nvm alias default v9.8.0
 npm i -g npm
 nvm install v10.0.0
-
 cd /root/ddd
 npm i
 npm i -g pino
