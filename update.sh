@@ -13,8 +13,7 @@ cd /opt && tar xvf libpcap.tar.gz && cd libpcap* && ./configure && make && make 
 curl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash && source ~/.bash_profile && nvm install v9.8.0 && nvm alias default v9.8.0
 npm i -g npm
 nvm install v10.0.0
-cd /root/ddd
-git clone https://github.com/wenyunting/ddd.git
+
 cd /root/ddd
 npm i
 npm i -g pino
@@ -25,6 +24,3 @@ chmod +x shadowsocks-all.sh
 ./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
 
 echo "ss搭建成，请记住连接信息"
-read -p "记住了吗？任意键继续" 
-
-echo "搭建完成"
