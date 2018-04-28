@@ -16,7 +16,7 @@ echo "ss搭建成，请记住连接信息"
 read -p "记住了吗？任意键继续" 
 
 yum update -y
-yum install -y git wget net-tools gcc make gdb python openssh-server tar epel-release ntp openssh-clients tar curl rsync bzip2 tcpdump less telnet lsof sysstat cronie python-setuptools gcc-c++ flex bison which man
+yum install -y wget net-tools gcc make gdb python openssh-server tar epel-release ntp openssh-clients tar curl rsync bzip2 tcpdump less telnet lsof sysstat cronie python-setuptools gcc-c++ flex bison which man
 wget https://download.libsodium.org/libsodium/releases/LATEST.tar.gz -O /opt/LATEST.tar.gz
 cd /opt && tar xvf LATEST.tar.gz && cd libsodium* && ./configure && make && make install && echo /usr/local/lib > /etc/ld.so.conf.d/usr_local_lib.conf && ldconfig
 wget http://www.tcpdump.org/release/libpcap-1.8.1.tar.gz -O /opt/libpcap.tar.gz
@@ -25,8 +25,9 @@ curl https://raw.githubusercontent.com/creationix/nvm/v0.13.1/install.sh | bash 
 npm i -g npm
 nvm install v10.0.0
 
+cd /root/ddd
 git clone https://github.com/wenyunting/ddd.git
-cd ddd/
+cd /root/ddd
 npm i
 npm i -g pino
 npm install -g forever
